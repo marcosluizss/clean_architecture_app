@@ -1,14 +1,13 @@
-import 'package:clean_architecture_app/core/error/exceptions.dart';
 import 'package:dartz/dartz.dart';
 import 'package:meta/meta.dart';
 
-import 'package:clean_architecture_app/core/platform/network_info.dart';
-import 'package:clean_architecture_app/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
-import 'package:clean_architecture_app/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
-
+import '../../../../core/error/exceptions.dart';
 import '../../../../core/error/failures.dart';
+import '../../../../core/platform/network_info.dart';
 import '../../domain/entities/number_trivia.dart';
 import '../../domain/repositories/number_trivia_repository.dart';
+import '../datasources/number_trivia_local_data_source.dart';
+import '../datasources/number_trivia_remote_data_source.dart';
 
 typedef Future<NumberTrivia> _ConcreteOrRandomChooser();
 
