@@ -15,15 +15,16 @@ void main() {
   });
 
   group('isConnected', () {
-    
     test('should foward call to DataConnectionChecker.hasConnection', () async {
-      when(mockDataConnectionChecker.hasConnection)
-          .thenAnswer((_) async => true);
+      final tHasConnectionFuture = Future.value(true);
 
-      final result = await networkInfoImpl.isConnected;
+      when(mockDataConnectionChecker.hasConnection)
+          .thenAnswer((_) => tHasConnectionFuture);
+
+      final result = networkInfoImpl.isConnected;
 
       verify(mockDataConnectionChecker.hasConnection);
-      expect(result, true);
+      expect(result, tHasConnectionFuture);
     });
   });
 }
