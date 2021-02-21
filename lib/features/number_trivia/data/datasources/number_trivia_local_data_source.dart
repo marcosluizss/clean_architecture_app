@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:clean_architecture_app/core/error/exceptions.dart';
+import '../../../../core/error/exceptions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:meta/meta.dart';
 
