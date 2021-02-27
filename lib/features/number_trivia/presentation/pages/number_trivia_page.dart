@@ -15,7 +15,10 @@ class NumberTriviaPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Number Trivia"),
       ),
-      body: SingleChildScrollView(child: buildBody(context)),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: SingleChildScrollView(child: buildBody(context)),
+      ),
     );
   }
 
